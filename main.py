@@ -22,10 +22,3 @@ if generate:
     img = qr.make_image(fill_color="black", back_color="white")
     img.save("qrcode.jpg")
     st.image(image=im.Image.convert(img), width=200)
-    with open("qrcode.jpg", "rb") as file:
-        st.download_button(
-            label="Download",
-            data=file,
-            file_name="qrcode.jpg",
-            mime="image/png",
-        )
