@@ -2,8 +2,11 @@ import qrcode
 import streamlit as st
 from PIL import Image as im
 
-st.image("logo.png", width=100)
-st.title("QR Code Generator")
+logo, title = st.columns([1,5])
+with logo:
+    st.image("logo.png", width=100)
+with title:
+    st.title("QR Code Generator")
 st.set_page_config(page_title="QR Code Generator", page_icon="logo.png")
 
 data = st.text_input("Input your URL or data to convert")
